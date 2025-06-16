@@ -15,7 +15,7 @@ terraform/
 ```
 
 #### credentials.auto.tfvars
-```hcl
+```terraform
 # Proxmox API endpoint, including port and /api2/json suffix
 proxmox_api_url = "https://<PROXMOX-IP>:8006/api2/json"
 
@@ -28,7 +28,7 @@ proxmox_api_token = "<YOUR-TOKEN-SECRET>"
 ```
 
 #### provider.tf
-```hcl
+```terraform
 terraform {
   required_providers {
     proxmox = {
@@ -61,7 +61,7 @@ provider "proxmox" {
 
 
 #### qemu-vm.tf
-```hcl
+```terraform
 variable vm_configs {
     type = map(object({
         vm_id = number
